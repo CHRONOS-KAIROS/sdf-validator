@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sdfval"
-version = "0.1.2"
+version = "0.1.3"
 description = ""
 authors = ["Brendon Boldt <bboldt@cs.cmu.edu>"]
 readme = "README.md"

@@ -20,11 +20,10 @@ def get_model_sdf() -> type[pydantic.BaseModel]:
     return get_model(sdf.Document)
 
 
-AnyDict = dict[str, Any]
 DictType = TypeVar("DictType")
 
 
-def validate_type(t: type[DictType], data: AnyDict) -> DictType:
+def validate_type(t: type[DictType], data: Any) -> DictType:
     """Validate type with Pydantic.
 
     Raises
@@ -37,5 +36,5 @@ def validate_type(t: type[DictType], data: AnyDict) -> DictType:
     return cast(DictType, data)
 
 
-def validate_sdf(data: AnyDict) -> sdf.Document:
+def validate_sdf(data: Any) -> sdf.Document:
     return validate_type(sdf.Document, data)
